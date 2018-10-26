@@ -1,0 +1,10 @@
+html, body, * {
+  box-sizing: border-box;
+  padding: 2px;
+}
+
+body {
+  font-family: canada-type-gibson, sans-serif;;
+  color: rgb(50, 50, 50);
+  padding: 20px 60px;
+}
