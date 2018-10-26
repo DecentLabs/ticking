@@ -79,7 +79,7 @@ a {
   font-weight: 400;
   position: relative;
 }
-a:hover:after {
+header a:hover:after {
   content: '';
   position: absolute;
   left: 0;
@@ -88,7 +88,7 @@ a:hover:after {
   height: 5px;
   background: var(--green)
 }
-a:hover:before {
+header a:hover:before {
   content: '';
   position: absolute;
   left: -7px;
