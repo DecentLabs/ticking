@@ -23,7 +23,7 @@ html, body {
 }
 
 #home {
-  height: calc(100vh - 60px);
+  min-height: calc(100vh - 60px);
   width: 100%;
   padding: 3em 4em;
   background-color: var(--bg-color);
@@ -32,10 +32,10 @@ html, body {
   justify-content: flex-start;
   text-align: center;
 }
-button[name="appstore-btn"] {
-  margin: 5px;
-  height: 50px;
-  width: 150px;
+button {
+  margin: 5em;
+  height: 5em;
+  width: 15em;
   cursor: pointer;
   border: none;
   background-color: var(--transparent);
@@ -52,15 +52,28 @@ h1 {
   color: var(--font-color-light);
   letter-spacing: 4px;
   margin-bottom: 0.7em;
+  margin-top: 0.3em;
 }
 h2 {
-  font-size: 1.5em;
+  color: var(--green);
   text-align: center;
-  font-weight: light;
-  color: var(--font-color-light);
+  font-weight: 400;
+  font-size: 2em;
+  position: relative;
+  margin-bottom: 3em;
+  margin-top: 1em;
+  letter-spacing: 4px;
 }
-.cover {
-  margin: 4em auto 0 auto;
+h3 {
+  font-weight: 400;
+  font-size: 1.5em;
+  letter-spacing: 2px;
+  margin-bottom: 1em;
+}
+#home h3 {
+  color: var(--font-color-light);
+  width: 50%;
+  margin: 0.5em auto 0.5em auto;
 }
 
 .nav {
@@ -79,7 +92,7 @@ a {
   font-weight: 400;
   position: relative;
 }
-header a:hover:after {
+header ul a:hover:after {
   content: '';
   position: absolute;
   left: 0;
@@ -88,7 +101,7 @@ header a:hover:after {
   height: 5px;
   background: var(--green)
 }
-header a:hover:before {
+header ul a:hover:before {
   content: '';
   position: absolute;
   left: -7px;
@@ -119,7 +132,7 @@ li {
 }
 
 section {
-  min-height: 50vh;
+  min-height: 100vh;
   text-align: center;
   padding: 2em;
   color: var(--font-color-dark);
@@ -147,33 +160,6 @@ section {
 }
 .feat-desc {
   width: 20vw;
-}
-#features h2 {
-  color: var(--green);
-  text-align: left;
-  font-weight: 400;
-  font-size: 2em;
-  position: relative;
-  margin-bottom: 3em;
-  margin-top: 1em;
-  letter-spacing: 4px;
-}
-/* #features h2:after {
-  content: '';
-  background-color: var(--bg-color);
-  content: '';
-  position: absolute;
-  left: 0;
-  bottom: -4px;
-  width: 100%;
-  height: 5px;
-} */
-
-h3 {
-  font-weight: 400;
-  font-size: 1.5em;
-  letter-spacing: 2px;
-  margin-bottom: 1em;
 }
 
 .icon {
@@ -216,64 +202,65 @@ footer span {
   align-self: center;
 }
 
-.graphics {
-  z-index: -1;
-  width: 100%;
-  height: 100vh;
-  position: absolute;
-  top: 0;
-  left: 0;
-  /* overflow: hidden; */
-  background-color: rgba(20, 56, 68);
+@media (min-width: 320px) and (max-width: 576px) {
+  .nav {
+    padding: 0;
+  }
+  .nav span {
+    display: none;
+  }
+  ul {
+    justify-content: space-around;
+  }
+  #home {
+    padding: 0.5em;
+    justify-content: center;
+  }
+  h1 {
+    font-size: 2.2em;
+  }
+  h3 {
+    font-size: 1.2em;
+  }
+  #home h3 {
+    padding: 0.5em;
+    width: 90%;
+  }
+  button {
+    width: 10.5em;
+    height: 3.5em;
+  }
+  #features {
+    padding: 1em;
+  }
+  h2 {
+    font-size: 1.5em;
+  }
+  .feature {
+    width: 80%;
+    padding: 0;
+  }
+  .feature .icon {
+    display: none;
+  }
+  .feat-desc {
+    width: 100%;
+  }
 }
 
-.drum {
-  width: 35vw;
-  height: 35vw;
-  border-radius: 100%;
-  background-color: rgba(23, 39, 49);;
-  position: absolute;
-  bottom: -10vw;
-  right: 10%;
-}
-.drum div {
-  width: 30vw;
-  height: 30vw;
-  border-radius: 100%;
-  background-color: rgba(25, 60, 70);
-  border-left: 12px solid rgba(10, 26, 38);
-  border-top: 8px solid rgba(10, 26, 38);
-  border-right: 2px solid rgba(10, 26, 38);
-  border-bottom: 2px solid rgba(10, 26, 38);
-  position: absolute;
-  bottom: 2.5vw;
-  right: 7%;
-}
-
-.stick {
-  background-color: rgba(10, 26, 38);
-  width: 15px;
-  height: 22vw;
-  position: absolute;
-  border-radius: 25%;
-}
-.stick:before {
-  content: '';
-  width: 30px;
-  height: 30px;
-  border-radius: 100%;
-  background-color: rgba(10, 26, 38);
-  position: absolute;
-  top: -25px;
-  left: -7.5px;
-}
-.stick1 {
-  bottom: -12vw;
-  right: 38%;
-  transform: rotate(40deg);
-}
-.stick2 {
-  bottom: -12vw;
-  right: 18%;
-  transform: rotate(-40deg);
+@media (min-width: 578px) and (max-width: 1024px) {
+  .nav {
+    padding-left: 5em;
+    padding-right: 5em;
+  }
+  #home h3 {
+    width: 80%;
+  }
+  .feature {
+    width: 85%;
+    margin-bottom: 3em;
+  }
+  .feat-desc {
+    width: 50%;
+  }
 }
