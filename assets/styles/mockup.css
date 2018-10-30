@@ -72,20 +72,9 @@
   border-radius: 50%;
 }
 
-/*.iphone-mockup.feat {
-  --multi: 0.8;
-  background-color: rgba(21, 30, 36, 1.5);
-  background-size: contain;
-  background-repeat: no-repeat;
-  box-shadow: 0px 0px 0px 2px var(--green);
-}*/
-
 .iphone-mockup.cover {
-  --multi: 1.5;
-  margin-top: 4em;
-  margin-bottom: 2em;
-  margin-left: auto;
-  margin-right: auto;
+  --multi: 2;
+  margin: 1em auto 1em auto;
   background-color: gray;
   animation: coverBackground 5s infinite;
   animation-timing-function: steps(1,end);
@@ -97,11 +86,12 @@
 
 @media (min-width: 320px) and (max-width: 1024px) {
   .iphone-mockup.cover {
-    --multi: 3;
+    --multi: 2.9;
+    margin-bottom: 5em;
   }
 }
 
-@media (min-height: 480px) and (max-height: 620px) and (max-width: 420px){
+@media (min-height: 480px) and (max-height: 620px) and (max-width: 380px){
   .iphone-mockup.cover {
     --multi: 3;
     margin-top: 2.5em;
@@ -114,26 +104,25 @@
     margin: 2em auto 2em auto;
   }
 }
-@media (min-height: 621px) and (max-height: 720px) and (min-width: 380px) {
+@media (min-height: 621px) and (max-height: 812px) and (min-width: 380px) {
   .iphone-mockup.cover {
-    --multi: 1.65;
-    margin-top: 2.5em;
-    margin-bottom: 2em;
+    --multi: 1.5;
+    margin: 0 auto 0 auto;
+  }
+  .cover-text {
+    margin-top: 0.5em;
+    margin-bottom: 3.5em;
   }
   h1 {
-    font-size: 3em;
-    margin-top: 0;
-    margin-bottom: 0.5em;
+    font-size: 2.5em;
+  }
+  h3 {
+    font-size: 1em;
   }
   #home {
     padding: 2em 3em;
   }
   #home h3 {
     font-size: 1.2em;
-  }
-  button {
-    width: 12em;
-    height: 4em;
-    margin: 1.5em auto 0.5em auto;
   }
 }

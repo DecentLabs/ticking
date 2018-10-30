@@ -4,7 +4,19 @@ html, body, * {
 }
 
 body {
-  font-family: canada-type-gibson, sans-serif;;
-  color: rgb(50, 50, 50);
-  padding: 20px 60px;
+  font-family: montserrat, sans-serif;
+  color: rgba(52, 52, 60, 1);
+  padding: 2em 3em;
+  line-height: 120%;
+}
+
+h2 {
+  padding-bottom: 1em;
+}
+li {
+  list-style: square;
+  margin-left: 2.5em;
+}
+a, a:visited {
+  color: rgba(60, 40, 98, 1);
 }
