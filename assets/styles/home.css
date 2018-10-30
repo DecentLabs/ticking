@@ -2,6 +2,7 @@
   --font-color-light: rgba(240, 238, 243, 1);
   --font-color-dark: rgba(52, 52, 60, 1);
   --bg-color: rgba(60, 40, 98, 1);
+  --bg-color-dark: rgba(40, 30, 68, 1);
   --bg-color-transp: rgba(60, 40, 98, 0.3);
   --transparent: rgba(0, 0, 0, 0);
   --green: rgba(50, 180, 174, 1);
@@ -27,7 +28,7 @@ html, body {
   min-height: calc(100vh - 60px);
   width: 100%;
   padding: 4em 4em;
-  background-color: var(--bg-color);
+  background-image: linear-gradient(to bottom, var(--bg-color-dark), var(--bg-color));
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
@@ -35,9 +36,9 @@ html, body {
   position: relative;
 }
 button {
-  margin: 5em;
-  height: 5em;
-  width: 15em;
+  margin: 2em;
+  height: 3.5em;
+  width: 10.5em;
   cursor: pointer;
   border: none;
   background-color: var(--transparent);
@@ -46,6 +47,7 @@ button {
   background-repeat: no-repeat;
   margin-left: auto;
   margin-right: auto;
+  /*box-shadow: 0px 0px 20px -1px var(--bg-color-dark);*/
 }
 .cover-text {
   margin-top: 1em;
@@ -70,8 +72,8 @@ h1:after {
 h2 {
   color: var(--green-darker);
   text-align: center;
-  font-weight: 500;
-  font-size: 2.2em;
+  font-weight: 600;
+  font-size: 2.5em;
   position: relative;
   margin-bottom: 3em;
   margin-top: 1em;
@@ -93,12 +95,14 @@ p, a {
   letter-spacing: 1px;
 }
 .nav {
+  /*position: fixed;
+  z-index: 10000;*/
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  padding-left: 10em;
-  padding-right: 10em;
-  background-color: var(--bg-color);
+  padding-left: 2em;
+  padding-right: 2em;
+  background-color: var(--bg-color-dark);
   width: 100%;
   height: 60px;
 }
@@ -137,6 +141,8 @@ header ul a:hover:before {
   width: 30px;
   height: 30px;
   display: inline-block;
+  border-radius: 5px;
+  box-shadow: 0px 0px 4px -1px rgba(15, 5, 15, 1);
 }
 .logo span {
   color: var(--green-darker);
@@ -257,7 +263,7 @@ footer span {
   width: 100%;
   margin: 0 2px 0 2px;
   background-color: var(--green-darker);
-  opacity: 0.03;
+  opacity: 0.06;
 }
 
 @media (min-width: 320px) and (max-width: 576px) {
