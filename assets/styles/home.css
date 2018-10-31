@@ -1,5 +1,5 @@
 :root {
-  --font-color-light: rgba(240, 238, 243, 1);
+  --font-color-light: rgba(243, 243, 245, 1);
   --font-color-dark: rgba(52, 52, 60, 1);
   --bg-color: rgba(60, 40, 98, 1);
   --bg-color-dark: rgba(40, 30, 68, 1);
@@ -22,6 +22,10 @@ html, body, * {
 html, body {
   width: 100%;
   height: 100%;
+}
+
+body {
+  background-color: var(--font-color-light);
 }
 
 #home {
@@ -202,24 +206,35 @@ section {
 .feat-desc {
   width: 50%;
   text-align: left;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 .icon {
   width: 15vw;
   height: 15vw;
-  box-shadow: 3px 3px 25px -4px var(--bg-color-transp);
-  border-radius: 2%;
+  box-shadow: 3px 3px 15px -3px var(--bg-color-transp);
+  border-radius: 3px;
+  padding: 3%;
   position: relative;
+  border: 1px solid var(--bg-color-transp);
+}
+.icon svg {
+  width: 100%;
+  height: 100%;
+  opacity: 0.9;
 }
 .icon:after {
   counter-increment: feature;
   content: '0' counter(feature);
   color: var(--green-light);
-  font-size: 7em;
+  font-size: 6em;
   position: absolute;
   font-weight: bold;
   left: -0.5em;
   top: -0.5em;
   background-color: var(--transparent);
+  display: none;
 }
 
 video {
@@ -267,7 +282,7 @@ footer span {
 }
 
 @media (min-width: 320px) and (max-width: 576px) {
-  .equalizer, .logo, .feature .icon, #features h2, footer span {
+  .equalizer, .logo, #features h2, footer span {
     display: none;
   }
   .nav {
@@ -305,9 +320,22 @@ footer span {
   .feature {
     width: 100%;
     padding: 0 10px 0 10px;
+    flex-direction: column-reverse !important;
+  }
+  .icon {
+    width: 33vw;
+    height: 33vw;
+    margin: 1em auto 2em auto;
+    /*border-radius: 0;*/
+  }
+  .icon svg {
+    width: 80%;
+    height: 80%;
+    margin-top: 10%;
   }
   .feat-desc {
     width: 100%;
+    text-align: center;
   }
   .cover-text {
     margin-top: 0em;
