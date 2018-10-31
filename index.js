@@ -27,21 +27,45 @@ function equalizerAnim () {
 }
 
 function svgAnim () {
-  let icon = document.querySelectorAll('.icon')[2]
-  icon.innerHTML = svgs.drum
+  let icons = document.querySelectorAll('.icon')
+  icons[0].innerHTML = svgs.ticks
+  icons[2].innerHTML = svgs.drum
 
   if (SVG.supported) {
-    // let drum = SVG.select('#drum')
-    let left = SVG.select('#drum-left')
-    left.animate({ ease: '<', delay: '0s' }).rotate(60)
+    let drumLeft = SVG.select('#drum-left')
+    drumLeft.animate({ ease: '<', delay: '0s' }).rotate(60)
                   .rotate(-120)
                   .rotate(0)
                   .loop()
 
-    let right = SVG.select('#drum-right')
-    right.animate({ ease: '<', delay: '0.5s' }).rotate(80)
+    let drumRight = SVG.select('#drum-right')
+    drumRight.animate({ ease: '<', delay: '0.5s' }).rotate(80)
                    .rotate(0)
                    .loop()
+
+    let ticks = []
+    for (let t=0; t<10; t++) {
+      let tick = document.querySelector('#tick_' + t + ' rect')
+      ticks.push(tick)
+      // window.requestAnimationFrame(function () {
+      //   tickAnim(460 + t*60, t, 0, null)
+      // })
+    }
+
+    // function tickAnim(time, i, counter, step) {
+    //   if (counter === i * 60 || (counter && counter % time === 0)) {
+    //     ticks[i].style.fill = 'red'
+    //     step = counter + 30
+    //   }
+    //   if (counter === step) {
+    //     ticks[i].style.fill = '#148787'
+    //     step = null
+    //   }
+    //   counter = counter + 1
+    //   window.requestAnimationFrame(function () {
+    //     tickAnim(time, i, counter, step)
+    //   })
+    // }
   }
 }
 
