@@ -42,34 +42,18 @@ function svgAnim () {
     drumRight.animate({ ease: '<', delay: '0.5s' }).rotate(80)
                    .rotate(0)
                    .loop()
-
-    let ticks = []
-    for (let t=0; t<10; t++) {
-      let tick = document.querySelector('#tick_' + t + ' rect')
-      ticks.push(tick)
-      // window.requestAnimationFrame(function () {
-      //   tickAnim(460 + t*60, t, 0, null)
-      // })
-    }
-
-    // function tickAnim(time, i, counter, step) {
-    //   if (counter === i * 60 || (counter && counter % time === 0)) {
-    //     ticks[i].style.fill = 'red'
-    //     step = counter + 30
-    //   }
-    //   if (counter === step) {
-    //     ticks[i].style.fill = '#148787'
-    //     step = null
-    //   }
-    //   counter = counter + 1
-    //   window.requestAnimationFrame(function () {
-    //     tickAnim(time, i, counter, step)
-    //   })
-    // }
   }
 }
 
 (function init () {
+  let downloadBtns = document.querySelectorAll('button')
+  downloadBtns.forEach((btn) => {
+    btn.addEventListener('click', function () {
+      // TODO url
+      let win = window.open('https://www.apple.com/lae/ios/app-store/', '_blank')
+      win.focus()
+    })
+  })
   equalizerAnim()
   svgAnim()
 })()

@@ -51,7 +51,11 @@ button {
   background-repeat: no-repeat;
   margin-left: auto;
   margin-right: auto;
-  /*box-shadow: 0px 0px 20px -1px var(--bg-color-dark);*/
+  z-index: 99999;
+}
+#download button {
+  height: 4em;
+  width: 12em;
 }
 .cover-text {
   margin-top: 1em;
@@ -99,8 +103,6 @@ p, a {
   letter-spacing: 1px;
 }
 .nav {
-  /*position: fixed;
-  z-index: 10000;*/
   display: flex;
   flex-direction: row;
   justify-content: space-between;
@@ -242,7 +244,7 @@ video {
 }
 
 #download {
-  min-height: calc(100vh / 3);
+  min-height: auto;
 }
 
 footer {
@@ -256,6 +258,7 @@ footer {
 }
 footer li, footer span {
   color: var(--font-color-light);
+  opacity: 0.7;
 }
 footer span {
   width: 50%;
@@ -326,7 +329,6 @@ footer span {
     width: 33vw;
     height: 33vw;
     margin: 1em auto 2em auto;
-    /*border-radius: 0;*/
   }
   .icon svg {
     width: 80%;
@@ -340,6 +342,10 @@ footer span {
   .cover-text {
     margin-top: 0em;
     margin-bottom: 1em;
+  }
+  #download button {
+    height: 3.5em;
+    width: 10.5em;
   }
 }
 
