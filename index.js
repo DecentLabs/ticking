@@ -29,10 +29,12 @@ function equalizerAnim () {
 
 function svgAnim () {
   let icons = document.querySelectorAll('.icon')
-  icons[0].innerHTML = svgs.ticks
-  icons[2].innerHTML = svgs.drum
+  if (icons.length) {
+    icons[0].innerHTML = svgs.ticks
+    icons[2].innerHTML = svgs.drum
+  }
 
-  if (SVG.supported) {
+  if (SVG.supported && icons.length) {
     // animation #1
     let ticks = [1, 0, 0, 0, 0, 0]
     let tickHit, tick
