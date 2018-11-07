@@ -65,6 +65,7 @@ h3 {
 }
 p, a {
   letter-spacing: 1px;
+  line-height: 150%;
 }
 button {
   height: 4.5em;
@@ -249,6 +250,22 @@ header ul a:hover:before {
   height: 100%;
 }
 
+/* contact */
+#contact a {
+  color: var(--bg-color-dark);
+  font-weight: 500;
+  text-decoration: underline;
+}
+#contact h2 {
+  margin-bottom: 1em;
+}
+#contact button {
+  width: 15em;
+  height: 5em;
+  margin: 3em 0 2em 0;
+  background-image: url('./../appstore-btn-dark.svg');
+}
+
 /*footer*/
 footer {
   background-color: var(--bg-color);
@@ -264,7 +281,7 @@ footer ul {
 }
 footer li, footer span {
   color: var(--font-color-light);
-  opacity: 0.7;
+  opacity: 1;
 }
 footer span {
   width: 50%;
@@ -292,11 +309,13 @@ footer span {
 
 /*media queries*/
 @media (min-width: 320px) and (max-width: 576px) {
-  .equalizer, .logo span, #features h2, footer span {
+  .equalizer, .logo span, #features h2, #contact h2, footer span {
     display: none;
   }
   .nav {
     font-size: 0.8em;
+    padding-left: 1em;
+    padding-right: 1em;
   }
   footer ul {
     justify-content: space-around;
