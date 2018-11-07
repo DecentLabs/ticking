@@ -67,15 +67,15 @@ p, a {
   letter-spacing: 1px;
 }
 button {
-  height: 3.5em;
-  width: 10.5em;
+  height: 4.5em;
+  width: 13.5em;
   cursor: pointer;
   border: none;
   background-color: var(--transparent);
   background-image: url('./../appstore-btn.svg');
   background-size: 100% 100%;
   background-repeat: no-repeat;
-  margin: 2em auto 2em auto;
+  margin: 3em auto 2em auto;
   z-index: 99999;
 }
 
@@ -322,6 +322,7 @@ footer span {
   button {
     width: 10.5em;
     height: 3.5em;
+    margin-top: 0;
   }
   #features {
     padding: 1em;
@@ -353,7 +354,7 @@ footer span {
   }
 }
 
-@media (min-width: 578px) and (max-width: 1024px) {
+@media (min-width: 578px) and (max-width: 1023px) {
   .nav {
     padding-left: 5em;
     padding-right: 5em;
@@ -374,5 +375,10 @@ footer span {
   }
   .feat-desc {
     width: 90%;
+  }
+  button {
+    width: 19.5em;
+    height: 6.5em;
+    margin-top: 0em;
   }
 }

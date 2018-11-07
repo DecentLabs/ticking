@@ -90,11 +90,11 @@
 @media (min-width: 320px) and (max-width: 1024px) {
   .iphone-mockup.cover {
     --multi: 2.9;
-    margin-bottom: 5em;
+    margin-bottom: 4em;
   }
 }
 
-@media (min-height: 480px) and (max-height: 620px) and (max-width: 380px){
+@media (min-height: 320px) and (max-height: 620px) and (max-width: 380px){
   .iphone-mockup.cover {
     --multi: 3;
     margin-top: 2.5em;
