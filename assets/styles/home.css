@@ -290,7 +290,6 @@ footer span {
   opacity: 0.06;
 }
 
-
 /*media queries*/
 @media (min-width: 320px) and (max-width: 576px) {
   .equalizer, .logo span, #features h2, footer span {
@@ -365,9 +364,9 @@ footer span {
   #features h2{
     margin-bottom: 1em;
   }
-  #features .cont {
+  /*#features .cont {
     flex-wrap: wrap;
-  }
+  }*/
   .feature {
     width: 50%;
     padding: 0.5em;
