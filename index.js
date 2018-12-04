@@ -64,12 +64,6 @@ function svgAnim () {
 }
 
 (function init () {
-  document.querySelectorAll('button').forEach((btn) => {
-    btn.addEventListener('click', function () {
-      // TODO url
-      window.open('https://www.apple.com/lae/ios/app-store/', '_blank').focus()
-    })
-  })
   equalizerAnim()
-  svgAnim()
+  // svgAnim()
 })()
