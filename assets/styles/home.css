@@ -294,11 +294,11 @@ footer .left {
 }
 
 footer .image {
-  background-image: url('./../decent.png');
+  background-image: url('https://decent.org/assets/created_by_decent_badge/created_by_badge_white.png');
   background-size: contain;
   background-repeat: no-repeat;
   height: 100%;
-  width: 200px;
+  width: 160px;
   max-width: 200px;
   background-position: center center;
 }
@@ -391,8 +391,8 @@ footer .image {
   }
   footer ul .image {
     height: 50px;
-    width: 100px;
-    background-image: url('./../decent2.png');
+    width: 90px;
+    background-image: url('https://decent.org/assets/created_by_decent_badge/created_by_badge_white_small.png');
   }
   footer ul li a {
     font-size: 11px;
@@ -408,6 +408,9 @@ footer .image {
   footer ul {
     padding: 3px;
     width: 100%;
+  }
+  footer {
+    padding-left: 0;
   }
 }
 
